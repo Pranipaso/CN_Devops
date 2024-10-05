@@ -3,13 +3,9 @@ pipeline {
     stages {
         stage("Install Dependency"){
             steps {
-                bat 'npm install'
+                bat 'npm install && npm test'
             }
         }
-        stage("Run Tests"){
-            steps {
-                bat 'npm test'
-            }
-        }
+        
     }
 }
